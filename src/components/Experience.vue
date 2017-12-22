@@ -1,14 +1,12 @@
 <template>
-  <div class="experience">
+  <div class="xp">
     <h3>Experience</h3>
     <div class="job-list">
       <div class="job" v-for="job in jobs">
-        <span class="head">
-          <h4>{{job.name}}</h4>
+          {{job.name}}
           {{job.city}}
           {{job.year}}
-        </span>
-        {{job.title}}
+          {{job.title}}
           <div v-for="role in job.roles">
             <span>{{role}}</span>
         </div>
@@ -57,7 +55,7 @@ export default {
 </script>
 
 <style scoped>
-.experience {
+.xp {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -68,27 +66,6 @@ export default {
   display: flex;
   flex-direction: column;
   width: 500px;
-}
-
-.job {
-  display: flex;
-  flex-direction: column;
-}
-
-.head,
- {
-  display: flex;
-  justify-content: flex-start;
-}
-
-p {
-  padding-right: 20px;
-}
-
-span {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0px;
 }
 
 h3 {
