@@ -1,21 +1,16 @@
-# teach-yourself
+## Why?
 
-> A Vue.js project
+Vue appears to be a widely used framework - I wanted to see how it compares to React.
 
-## Build Setup
+## What problem does it solve?
 
-``` bash
-# install dependencies
-npm install
+Like React, it allows you to easily build applications from many small components. You can focus on individual features and avoid falling down a rabbit hole.
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Opinion
 
-# build for production with minification
-npm run build
+After learning React, Vue concepts are easy to understand. The syntax is a little hard to get used to though. There is a little more boilerplate that goes along with Vue.
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+## Resources
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+* vuejs.org
+* google
