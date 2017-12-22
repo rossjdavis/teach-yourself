@@ -1,5 +1,5 @@
 <template>
-  <div class="xp">
+  <div class="section">
     <h3>Experience</h3>
     <div class="job-list">
       <div class="job" v-for="job in jobs">
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style scoped>
-.xp {
+.section {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;

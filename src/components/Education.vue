@@ -1,9 +1,9 @@
 <template>
   <div class="section">
-    <h3>Skills</h3>
+    <h3>Education</h3>
     <div class="items">
-      <p v-for="skill in skills">
-        {{ skill.skill }}
+      <p v-for="item in items">
+        {{ item.item }}
       </p>
     </div>
   </div>
@@ -11,25 +11,15 @@
 
 <script>
 export default {
-  name: 'Skills',
+  name: 'Education',
   data() {
     return {
-      skills: [
-        { skill: 'JavaScript' },
-        { skill: 'HTML' },
-        { skill: 'CSS' },
-        { skill: 'Ruby' },
-        { skill: 'RAILS' },
-        { skill: 'Sinatra' },
-        { skill: 'Mongoose' },
-        { skill: 'Express' },
-        { skill: 'React' },
-        { skill: 'Node' },
-        { skill: 'MERN' },
-        { skill: 'SQL' },
-        { skill: 'noSQL' },
-        { skill: 'MVC' },
-        { skill: 'ActiveRecord' }
+      items: [
+        { item: 'General Assembly, WDI 19 Student, 2017-2018' },
+        {
+          item: 'Jamestown Community College, A.S., Computer Science, 2007-2009'
+        },
+        { item: 'Erie Community College, A.S., Computer Science, 2013' }
       ]
     }
   }
