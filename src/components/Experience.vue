@@ -1,14 +1,14 @@
 <template>
-  <div class="section">
+  <div class="wrapper">
     <h3>Experience</h3>
     <div class="job-list">
       <div class="job" v-for="job in jobs">
-          {{job.name}}
-          {{job.city}}
-          {{job.year}}
-          {{job.title}}
-          <div v-for="role in job.roles">
-            <span>{{role}}</span>
+        <div class="job-head">
+          <span>{{job.name}}, {{job.city}}, {{job.year}}</span>
+        </div>
+        <span>{{job.title}}</span>
+        <div class="job-role" v-for="role in job.roles">
+          <li>{{role}}</li>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@ export default {
           roles: ['Web Developer Immersive', 'UX Design Bootcamp']
         },
         {
-          name: 'AAMC',
+          name: 'Association of American Medical Colleges',
           city: 'Washington, DC',
           year: '2014',
           title: 'Help Desk Engineer',
@@ -55,25 +55,44 @@ export default {
 </script>
 
 <style scoped>
-.section {
+
+div, h3, span {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  margin: 0 auto;
+  flex-direction: row;
 }
 
+.job,
 .job-list {
-  display: flex;
   flex-direction: column;
   width: 500px;
 }
 
+.job {
+  padding-bottom: 20px;
+}
+
+.job-head {
+}
+
+.job-list {
+  border-bottom: 1px solid black;
+}
+
+.job-role {
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
 h3 {
-  display: flex;
   align-items: center;
-  width: 250px;
   justify-content: center;
+  width: 250px;
   padding-right: 30px;
+}
+
+.wrapper {
+  justify-content: center;
+  padding-top: 20px;
 }
 
 

@@ -1,7 +1,13 @@
 <template>
-  <div class="header">
+  <div class="wrapper">
     <img src="../assets/me.png"/>
-    <div class="brand"> {{ statement }} </div>
+    <div class="brand">
+      <div class='statement'> {{ statement }} </div>
+      <nav>
+        <a href="/#/">Home</a>
+        <a href="/#/resume">Resume</a>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -19,23 +25,53 @@ export default {
 </script>
 
 <style scoped>
-.header {
+
+div, nav {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  margin: 0 auto;
+  flex-direction: row;
 }
 
 .brand {
-  display: flex;
+  justify-content: center;
   align-items: center;
   width: 500px;
+  flex-direction: column;
 }
+
+.statement {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+nav {
+  padding-top: 20px;
+}
+
+a {
+  padding: 0 10px;
+  text-decoration: none;
+  color: black;
+
+}
+
+a:hover {
+  font-weight: 700;
+}
+
 
 img {
   width: 250px;
   height: 250px;
-  padding-right: 30px;
+  border: 1px solid white;
+  border-radius: 125px;
+  margin-right: 30px;
+}
+
+.wrapper {
+  justify-content: center;
 }
 
 

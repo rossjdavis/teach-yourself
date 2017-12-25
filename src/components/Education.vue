@@ -1,10 +1,10 @@
 <template>
-  <div class="section">
+  <div class="wrapper">
     <h3>Education</h3>
     <div class="items">
-      <p v-for="item in items">
+      <span v-for="item in items">
         {{ item.item }}
-      </p>
+      </span>
     </div>
   </div>
 </template>
@@ -27,17 +27,14 @@ export default {
 </script>
 
 <style scoped>
-.section {
+div {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  margin: 0 auto;
+  flex-direction: row;
 }
 
 .items {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 500px;
 }
 
@@ -49,12 +46,9 @@ h3 {
   padding-right: 30px;
 }
 
-p {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 0 9px;
-
+.wrapper {
+  justify-content: center;
+  padding-top: 20px;
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="wrapper">
     <h3>Skills</h3>
     <div class="items">
       <p v-for="skill in skills">
@@ -29,7 +29,8 @@ export default {
         { skill: 'SQL' },
         { skill: 'noSQL' },
         { skill: 'MVC' },
-        { skill: 'ActiveRecord' }
+        { skill: 'ActiveRecord' },
+        { skill: 'Vue' }
       ]
     }
   }
@@ -37,34 +38,35 @@ export default {
 </script>
 
 <style scoped>
-.section {
+
+div, h3, p {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  margin: 0 auto;
+  flex-direction: row;
 }
 
 .items {
-  display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 500px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 h3 {
-  display: flex;
   align-items: center;
-  width: 250px;
   justify-content: center;
+  width: 250px;
   padding-right: 30px;
 }
 
 p {
-  display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
-  padding: 0 9px;
+  padding: 0 5px;
 
+}
+
+.wrapper {
+  justify-content: center;
 }
 
 </style>
