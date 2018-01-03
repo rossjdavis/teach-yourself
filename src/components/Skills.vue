@@ -1,10 +1,13 @@
 <template>
   <div class="wrapper">
     <h3>Skills</h3>
-    <div class="items">
-      <p v-for="skill in skills">
-        {{ skill.skill }}
-      </p>
+    <div class="row">
+      <div class="col"></div>
+      <div class="items">
+        <span v-for="skill in skills">
+          {{ skill.skill }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -39,34 +42,38 @@ export default {
 
 <style scoped>
 
-div, h3, p {
+div {
   display: flex;
+  flex-direction: column;
+}
+
+.row {
   flex-direction: row;
+}
+
+.col {
+  width: 250px;
 }
 
 .items {
   flex-flow: row wrap;
-  justify-content: center;
   width: 500px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+}
+
+
+span {
+  padding-left: 15px;
 }
 
 h3 {
-  align-items: center;
-  justify-content: center;
-  width: 250px;
-  padding-right: 30px;
-}
-
-p {
-  justify-content: space-between;
-  padding: 0 5px;
-
+  border-bottom: 1px solid black;
+  text-align: left;
+  margin-top: -5px;
 }
 
 .wrapper {
-  justify-content: center;
+  width: 750px;
+  margin: 0 auto;
 }
 
 </style>

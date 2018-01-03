@@ -1,12 +1,15 @@
 <template>
   <div class="wrapper">
-    <img src="../assets/me.png"/>
-    <div class="brand">
-      <div class='statement'> {{ statement }} </div>
-      <nav>
-        <a href="/#/">Home</a>
-        <a href="/#/resume">Resume</a>
-      </nav>
+    <!-- <nav>
+      <a href="/#/">Home</a>
+      <a href="/#/resume">Resume</a>
+    </nav> -->
+    <h2>Ross Davis</h2>
+    <div class="row">
+      <img src="../assets/me.png"/>
+      <div class="brand">
+        <div class='statement'> {{ statement }} </div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,8 +29,12 @@ export default {
 
 <style scoped>
 
-div, nav {
+div {
   display: flex;
+  flex-direction: column;
+}
+
+.row {
   flex-direction: row;
 }
 
@@ -39,11 +46,7 @@ div, nav {
 }
 
 .statement {
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
   padding: 20px 0;
-  text-align: center;
-  margin-top: 40px;
 }
 
 nav {
@@ -54,24 +57,23 @@ a {
   padding: 0 10px;
   text-decoration: none;
   color: black;
-
 }
-
-a:hover {
-  font-weight: 700;
-}
-
 
 img {
   width: 250px;
   height: 250px;
   border: 1px solid white;
   border-radius: 125px;
-  margin-right: 30px;
+  margin-right: 15px;
+}
+
+h2 {
+  text-align: left;
 }
 
 .wrapper {
-  justify-content: center;
+  width: 750px;
+  margin: 0 auto;
 }
 
 
